@@ -1,5 +1,5 @@
--- Estructura de la tabla
-CREATE TABLE items (
+-- 1. Creación de la estructura de la tabla
+CREATE TABLE IF NOT EXISTS items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     cat VARCHAR(50) NOT NULL,
@@ -7,7 +7,12 @@ CREATE TABLE items (
     units INT NOT NULL
 );
 
--- Datos de ejemplo
+-- 2. Inserción de los datos reales del inventario
 INSERT INTO items (name, cat, price, units) VALUES 
-('Laptop Gaming', 'Electrónica', 1200.00, 5),
-('Silla Oficina', 'Mobiliario', 150.00, 10);
+('Laptop Gaming MSI', 'Electrónica', 1250.99, 5),
+('Silla Ergonómica Pro', 'Mobiliario', 189.50, 12),
+('Monitor 4K 27 pulgadas', 'Electrónica', 340.00, 8),
+('Escritorio Elevable L', 'Mobiliario', 450.00, 3),
+('Teclado Mecánico RGB', 'Electrónica', 85.00, 20),
+('Ratón Inalámbrico Pro', 'Electrónica', 45.99, 15),
+('Estantería Metálica', 'Mobiliario', 75.00, 10);
